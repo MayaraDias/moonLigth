@@ -1,0 +1,69 @@
+html,
+div,
+section,
+body,
+main {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a2a43;
+  min-height: 93.75rem;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6.25rem;
+  bottom: 0;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 10000;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #0a2a43;
+  z-index: 10000;
+  mix-blend-mode: color;
+}
+
+#text {
+  font-weight: 500;
+  position: relative;
+  color: #fff;
+  font-size: 12rem;
+  z-index: 1;
+}
+
+.section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*específica como o conteúdo de um elemento*/
+  pointer-events: none;
+}
+
+#road {
+  z-index: 2;
+}
